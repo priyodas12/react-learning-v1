@@ -56,8 +56,8 @@ export default class App extends Component {
     this.setState(
       {
         humans: [
-          { name: "A", age: 50 },
           { name: event.target.value, age: 50 },
+          { name: "B", age: 50 },
           { name: "C", age: 50 }
         ]
       }
@@ -94,6 +94,7 @@ export default class App extends Component {
             return <Human
               name={h.name}
               age={h.age}
+              changed={this.nameChangeHandler}
             />
           })}
         </div>);
