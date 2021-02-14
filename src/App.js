@@ -49,18 +49,34 @@ export default class App extends Component {
     )
   }
 
+  nameChangeHandler = (event) => {
+
+    this.setState(
+      {
+        humans: [
+          { name: "A", age: 50 },
+          { name: event.target.value, age: 50 },
+          { name: "C", age: 50 }
+        ]
+      }
+    )
+  }
+
   render() {
     return (
       <>
         <Human
           name={this.state.humans[0].name}
           age={this.state.humans[0].age}
-          click={this.iqChnageHandler.bind(this, "CAB")}>
-
+          click={this.iqChnageHandler.bind(this, "D")}>
         </Human>
-        <Human name={this.state.humans[1].name} age={this.state.humans[1].age}></Human>
+        <Human
+          name={this.state.humans[1].name}
+          age={this.state.humans[1].age}
+          changed={this.nameChangeHandler}>
+        </Human>
         <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
-        <button onClick={this.iqChnageHandler.bind(this, "ABC")}>Change Content</button>
+        <button onClick={this.iqChnageHandler.bind(this, "E")}>Change Content</button>
       </>
     )
   }

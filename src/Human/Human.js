@@ -7,6 +7,7 @@ const human = (props) => {
         '{props.name} with IQ Level {Math.floor(Math.random() * props.age)}/100, {props.exp}`
       </h4>
       <p>{props.children}</p>
+      <input type="text" onChange={props.changed}></input>
     </div>
   );
 }
