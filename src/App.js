@@ -38,12 +38,12 @@ export default class App extends Component {
   handleEvent() { }
 
   // Class Properties (Stage 3 Proposal)
-  iqChangeHandler = (newName) => {
+  iqChangeHandler = () => {
 
     this.setState(
       {
         humans: [
-          { name: newName, age: 50 },
+          { name: "A", age: 50 },
           { name: "B", age: 50 },
           { name: "C", age: 50 }
         ]
@@ -90,19 +90,12 @@ export default class App extends Component {
     if (this.state.showHuman) {
       humanInfo = (
         <div>
-          <Human
-            name={this.state.humans[0].name}
-            age={this.state.humans[0].age}
-            click={this.iqChangeHandler.bind(this, "D")}
-          >
-          </Human>
-          <Human
-            name={this.state.humans[1].name}
-            age={this.state.humans[1].age}
-            changed={this.nameChangeHandler}
-          >
-          </Human>
-          <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
+          {this.state.humans.map(h => {
+            return <Human
+              name={h.name}
+              age={h.age}
+            />
+          })}
         </div>);
     }
     return (
@@ -110,12 +103,15 @@ export default class App extends Component {
         <h2>IQ Dashboard</h2>
         <button
           onClick={this.showContentHandler}
-          style={btnStyle}
-        >
+          style={btnStyle}>
           Show Content
         </button>
+        <button
+          onClick={this.iqChangeHandler}
+          style={btnStyle}>
+          Change IQ
+        </button>
         {humanInfo}
-
       </div>
     )
   }
