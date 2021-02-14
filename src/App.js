@@ -1,6 +1,7 @@
 
 import './App.css';
 
+
 import React, { Component } from 'react'
 import Human from './Human/Human'
 export default class App extends Component {
@@ -63,8 +64,18 @@ export default class App extends Component {
   }
 
   render() {
+    const btnStyle = {
+      backgroundColor: "lightGreen",
+      border: "2px solid",
+      textAlign: "center",
+      margin: "20px 100px auto",
+      padding: "10px",
+      cursor: "pointer",
+      textDecoration: "line"
+    }
     return (
-      <>
+      <div className="App">
+        <h2>IQ Dashboard</h2>
         <Human
           name={this.state.humans[0].name}
           age={this.state.humans[0].age}
@@ -76,8 +87,13 @@ export default class App extends Component {
           changed={this.nameChangeHandler}>
         </Human>
         <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
-        <button onClick={this.iqChnageHandler.bind(this, "E")}>Change Content</button>
-      </>
+        <button
+          onClick={this.iqChnageHandler.bind(this, "E")}
+          style={btnStyle}
+        >
+          Change Content
+         </button>
+      </div>
     )
   }
 }

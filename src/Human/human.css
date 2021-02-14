@@ -1,6 +1,14 @@
-.human
+.Human
 {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  border-radius: 5px;
+  margin: 30px 20px auto;
+  border: 3px solid rgb(82, 214, 99);
+  padding:20px;
+  text-align:center;
+  box-shadow: 10px 5px 5px rgb(125, 160, 45);
+  background-color: #7795d3;
+  min-height: 15vh;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  color:rgb(7, 53, 71);
 }
