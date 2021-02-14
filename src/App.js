@@ -71,18 +71,19 @@ const App = (props) => {
       { name: "A", age: 50 },
       { name: "B", age: 50 },
       { name: "C", age: 50 }
-    ],
-    otherState: "nothing much here"
+    ]
   });
 
+  const [otherStateData, setOtheStateData] = useState("No Changes Needed");
+
+  console.log(initialHumanState, otherStateData);
   const changeIQHandler = () => {
     setHumanState({
       humans: [
         { name: "A", age: 50 },
         { name: "B", age: 50 },
         { name: "C", age: 50 }
-      ],
-      otherState: "other state unchanged"
+      ]
     });
   }
   return (
