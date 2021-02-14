@@ -92,6 +92,7 @@ export default class App extends Component {
         <div>
           {this.state.humans.map(h => {
             return <Human
+              key={h.name}
               name={h.name}
               age={h.age}
               changed={this.nameChangeHandler}
