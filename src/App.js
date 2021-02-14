@@ -35,7 +35,17 @@ export default class App extends Component {
   handleEvent() { }
 
   // Class Properties (Stage 3 Proposal)
-  handler = () => { this.setState() }
+  handler = () => {
+    this.setState(
+      {
+        humans: [
+          { name: "A", age: 24 },
+          { name: "B", age: 44 },
+          { name: "C", age: 84 }
+        ]
+      }
+    )
+  }
 
   render() {
     return (
@@ -43,6 +53,7 @@ export default class App extends Component {
         <Human name={this.state.humans[0].name} age={this.state.humans[0].age}></Human>
         <Human name={this.state.humans[1].name} age={this.state.humans[1].age}></Human>
         <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
+        <button onClick={this.handler}>Change Content</button>
       </>
     )
   }
