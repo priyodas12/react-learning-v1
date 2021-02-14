@@ -69,7 +69,12 @@ export default class App extends Component {
     this.setState({ showHuman: !nowShow });
   }
 
+
+
+
   render() {
+
+
     const btnStyle = {
       backgroundColor: "lightGreen",
       border: "2px solid",
@@ -78,6 +83,27 @@ export default class App extends Component {
       padding: "10px",
       cursor: "pointer",
       textDecoration: "line"
+    }
+
+    let humanInfo = null;
+
+    if (this.state.showHuman) {
+      humanInfo = (
+        <div>
+          <Human
+            name={this.state.humans[0].name}
+            age={this.state.humans[0].age}
+            click={this.iqChangeHandler.bind(this, "D")}
+          >
+          </Human>
+          <Human
+            name={this.state.humans[1].name}
+            age={this.state.humans[1].age}
+            changed={this.nameChangeHandler}
+          >
+          </Human>
+          <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
+        </div>);
     }
     return (
       <div className="App">
@@ -88,24 +114,7 @@ export default class App extends Component {
         >
           Show Content
         </button>
-        { this.props.showHuman === true ?
-          <div>
-            <Human
-              name={this.state.humans[0].name}
-              age={this.state.humans[0].age}
-            //click={this.iqChangeHandler.bind(this, "D")}
-            >
-            </Human>
-            <Human
-              name={this.state.humans[1].name}
-              age={this.state.humans[1].age}
-            // changed={this.nameChangeHandler}
-            >
-            </Human>
-            <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
-          </div>
-          : null
-        }
+        {humanInfo}
 
       </div>
     )
