@@ -15,7 +15,8 @@ export default class App extends Component {
         { name: "A", age: 24 },
         { name: "B", age: 44 },
         { name: "C", age: 84 }
-      ]
+      ],
+      showHuman: true
     }
 
     this.handleEvent = this.handleEvent.bind(this)
@@ -37,7 +38,7 @@ export default class App extends Component {
   handleEvent() { }
 
   // Class Properties (Stage 3 Proposal)
-  iqChnageHandler = (newName) => {
+  iqChangeHandler = (newName) => {
 
     this.setState(
       {
@@ -62,6 +63,11 @@ export default class App extends Component {
       }
     )
   }
+  showContentHandler = (e) => {
+    console.log(e.target);
+    const nowShow = this.state.showHuman;
+    this.setState({ showHuman: !nowShow });
+  }
 
   render() {
     const btnStyle = {
@@ -76,23 +82,31 @@ export default class App extends Component {
     return (
       <div className="App">
         <h2>IQ Dashboard</h2>
-        <Human
-          name={this.state.humans[0].name}
-          age={this.state.humans[0].age}
-          click={this.iqChnageHandler.bind(this, "D")}>
-        </Human>
-        <Human
-          name={this.state.humans[1].name}
-          age={this.state.humans[1].age}
-          changed={this.nameChangeHandler}>
-        </Human>
-        <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
         <button
-          onClick={this.iqChnageHandler.bind(this, "E")}
+          onClick={this.showContentHandler}
           style={btnStyle}
         >
-          Change Content
-         </button>
+          Show Content
+        </button>
+        { this.props.showHuman === true ?
+          <div>
+            <Human
+              name={this.state.humans[0].name}
+              age={this.state.humans[0].age}
+            //click={this.iqChangeHandler.bind(this, "D")}
+            >
+            </Human>
+            <Human
+              name={this.state.humans[1].name}
+              age={this.state.humans[1].age}
+            // changed={this.nameChangeHandler}
+            >
+            </Human>
+            <Human name={this.state.humans[2].name} age={this.state.humans[2].age}></Human>
+          </div>
+          : null
+        }
+
       </div>
     )
   }
