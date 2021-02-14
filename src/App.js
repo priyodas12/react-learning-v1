@@ -71,7 +71,8 @@ const App = (props) => {
       { name: "A", age: 50 },
       { name: "B", age: 50 },
       { name: "C", age: 50 }
-    ]
+    ],
+    otherState: "nothing much here"
   });
 
   const changeIQHandler = () => {
@@ -80,12 +81,13 @@ const App = (props) => {
         { name: "A", age: 50 },
         { name: "B", age: 50 },
         { name: "C", age: 50 }
-      ]
+      ],
+      otherState: "other state unchanged"
     });
   }
   return (
     <div className="App">
-      <Human name={initialHumanState.humans[0].name} age={initialHumanState.humans[0].age}></Human>
+      <Human name={initialHumanState.humans[0].name} age={initialHumanState.humans[0].age} exp={initialHumanState.otherState}></Human>
       <Human name={initialHumanState.humans[1].name} age={initialHumanState.humans[1].age}></Human>
       <Human name={initialHumanState.humans[2].name} age={initialHumanState.humans[2].age}></Human>
       <button onClick={changeIQHandler}>Chnage IQ</button>
