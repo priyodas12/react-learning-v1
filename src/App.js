@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import UserForm from './Form/UserForm'
+import ComponentLC from './Lifecycle/ComponentLC'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <UserForm></UserForm>
+        <ComponentLC></ComponentLC>
       </div>
     )
   }
