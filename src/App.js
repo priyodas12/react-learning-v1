@@ -1,14 +1,12 @@
 import React, { Component } from 'react'
-import Fragment from './Advanced/Fragment'
-import Table from './Advanced/Table'
+import PureComp from './Advanced/PureComp'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Fragment></Fragment>
-        <Table></Table>
+        <PureComp></PureComp>
       </div>
     )
   }
