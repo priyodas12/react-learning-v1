@@ -31,6 +31,9 @@ export class ComponentLC extends Component {
   componentDidMount() {
     console.log("Parent-componentDidMount");
   }
+  componentWillUnmount() {
+    console.log("Parent-componentWillUnmount");
+  }
 
   render() {
     console.log("Parent-render");
@@ -41,8 +44,6 @@ export class ComponentLC extends Component {
       </div >
     )
   }
-
-
 }
 
 export default ComponentLC;

@@ -33,6 +33,9 @@ class ChildLC extends Component {
     console.log("Child-componentDidMount");
   }
 
+  componentWillUnmount() {
+    console.log("Child-componentWillUnmount");
+  }
   buttonhandler = (e) => {
     console.log(e.target);
     this.setState(
