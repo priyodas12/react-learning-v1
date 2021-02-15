@@ -15,6 +15,18 @@ export class ComponentLC extends Component {
     console.log("Parent-getDerivedStateFromProps");
     return null;
   }
+  shouldComponentUpdate(nextProps, nextState, nextContext) { // Rarely Used
+    console.log("Parent-shouldComponentUpdate");
+    return true;
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) { // Rarely Used
+    console.log("Parent-getSnapshotBeforeUpdate");
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Parent-componentDidUpdate");
+  }
 
   componentDidMount() {
     console.log("Parent-componentDidMount");
@@ -29,6 +41,8 @@ export class ComponentLC extends Component {
       </div >
     )
   }
+
+
 }
 
 export default ComponentLC;

@@ -15,8 +15,29 @@ class ChildLC extends Component {
     return null;
   }
 
-  componentDidMount() {
-    console.log("Child-componentDidMount");
+  shouldComponentUpdate(nextProps, nextState, nextContext) { // Rarely Used
+    console.log("Child-shouldComponentUpdate");
+    return true;
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState) { // Rarely Used
+    console.log("Child-getSnapshotBeforeUpdate");
+    return null;
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    console.log("Child-componentDidUpdate");
+  }
+
+  // componentDidMount() {
+  //   console.log("Child-componentDidMount");
+  // }
+
+  buttonhandler = (e) => {
+    console.log(e.target);
+    this.setState(
+      { name: "priya" }
+    )
   }
 
   render() {
@@ -24,6 +45,7 @@ class ChildLC extends Component {
     return (
       < div >
         child component
+        <button onClick={this.buttonhandler}>Child Button</button>
       </div >
     )
   }
