@@ -75,16 +75,26 @@ export default class App extends Component {
   render() {
 
 
-    const btnStyle = {
-      backgroundColor: "lightGreen",
+    const btnStyle1 = {
+      backgroundColor: "Green",
       border: "2px solid",
       textAlign: "center",
+      color: "white",
       margin: "20px 100px auto",
       padding: "10px",
       cursor: "pointer",
       textDecoration: "line"
     }
-
+    const btnStyle2 = {
+      backgroundColor: "Pink",
+      border: "2px solid",
+      textAlign: "center",
+      color: "white",
+      margin: "20px 100px auto",
+      padding: "10px",
+      cursor: "pointer",
+      textDecoration: "line"
+    }
     let humanInfo = null;
 
     if (this.state.showHuman) {
@@ -99,18 +109,21 @@ export default class App extends Component {
             />
           })}
         </div>);
+
+      btnStyle1.backgroundColor = "red";
+      btnStyle2.backgroundColor = "green";
     }
     return (
       <div className="App">
         <h2>IQ Dashboard</h2>
         <button
           onClick={this.showContentHandler}
-          style={btnStyle}>
+          style={btnStyle1}>
           Show Content
         </button>
         <button
           onClick={this.iqChangeHandler}
-          style={btnStyle}>
+          style={btnStyle2}>
           Change IQ
         </button>
         {humanInfo}
