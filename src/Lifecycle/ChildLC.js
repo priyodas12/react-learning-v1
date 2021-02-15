@@ -29,9 +29,9 @@ class ChildLC extends Component {
     console.log("Child-componentDidUpdate");
   }
 
-  // componentDidMount() {
-  //   console.log("Child-componentDidMount");
-  // }
+  componentDidMount() {
+    console.log("Child-componentDidMount");
+  }
 
   buttonhandler = (e) => {
     console.log(e.target);
