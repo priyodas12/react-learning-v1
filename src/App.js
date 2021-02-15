@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import ComponentLC from './Lifecycle/ComponentLC'
+import Fragment from './Advanced/Fragment'
+import Table from './Advanced/Table'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <ComponentLC></ComponentLC>
+        <Fragment></Fragment>
+        <Table></Table>
       </div>
     )
   }
