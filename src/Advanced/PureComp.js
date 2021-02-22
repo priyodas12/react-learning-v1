@@ -10,4 +10,4 @@ export class PureComp extends PureComponent {
   }
 }
 
-export default PureComp
+export default PureComp;
