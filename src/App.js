@@ -1,12 +1,14 @@
 import React, { Component } from 'react'
-import PureComp from './Advanced/PureComp'
+import ClickCounter from './HigherOrderComponents/ClickCounter'
+import HoverOverCounter from './HigherOrderComponents/HoverOverCounter'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <PureComp></PureComp>
+        <ClickCounter></ClickCounter>
+        <HoverOverCounter></HoverOverCounter>
       </div>
     )
   }
