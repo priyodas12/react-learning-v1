@@ -1,12 +1,16 @@
 import React, { Component } from 'react'
-import Demo from './TwoWayBinding/Demo'
+
 import './App.css';
+import ComponentC from './ContextAPI/ComponentC';
+import { UserProvider } from './ContextAPI/userContext';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Demo></Demo>
+        <UserProvider value="priyo">
+          <ComponentC></ComponentC>
+        </UserProvider>
       </div>
     )
   }
