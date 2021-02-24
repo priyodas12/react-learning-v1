@@ -3,14 +3,15 @@ import React, { Component } from 'react'
 import './App.css';
 //import ComponentC from './ContextAPI/ComponentC';
 //import { UserProvider } from './ContextAPI/userContext';
-
+import Counter from './Hooks/Counter'
 class App extends Component {
   render() {
     return (
       <div className="App">
-        {/*<UserProvider value="priyo">
-          //   <ComponentC></ComponentC>
-    // </UserProvider>*/}
+        { /*<UserProvider value="priyo">
+          //  <ComponentC></ComponentC>
+          //  </UserProvider>*/}
+        <Counter />
       </div>
     )
   }
