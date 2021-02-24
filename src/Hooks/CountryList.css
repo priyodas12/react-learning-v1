@@ -1,0 +1,18 @@
+img {
+  align-items: center;
+  height: 40%;
+  width: 40%;  
+  display: flexbox;
+  border-radius: 20px;
+  border: 2px solid lightsteelblue;
+}
+
+h2{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: chocolate;
+}
+
+h3{
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:rgb(163, 84, 19); 
+}

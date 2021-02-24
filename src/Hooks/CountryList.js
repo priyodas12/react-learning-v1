@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import './CountryList.css'
 
 export default function CountryList() {
 
@@ -34,11 +35,17 @@ export default function CountryList() {
     <div>Something went wrong...</div>
   }
   return (
-    <div>
-      <center><h2>Country List</h2></center><hr />
+    <div >
+      <center><h2>Country  Flags</h2></center><hr />
       <ol>
         {
-          country.map((item, i) => <li key={item.alpha2Code}>{item.name}</li>)
+          country.map((item, i) =>
+            <div key={item.name} className="countryList">
+              <h3>{item.name}</h3>
+              <img src={item.flag} alt={item.alpha2Code} ></img>
+            </div>
+
+          )
         }
       </ol>
     </div>
