@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './App.css';
 //import ComponentC from './ContextAPI/ComponentC';
 //import { UserProvider } from './ContextAPI/userContext';
-import CountryList from './Hooks/CountryList'
+//import CountryList from './Hooks/CountryList'
 class App extends Component {
   render() {
     return (
@@ -11,7 +11,7 @@ class App extends Component {
         { /*<UserProvider value="priyo">
           //  <ComponentC></ComponentC>
           //  </UserProvider>*/}
-        <CountryList />
+
       </div>
     )
   }

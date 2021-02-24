@@ -10,9 +10,9 @@ export default function Counter() {
     document.title = `You Clicked ${count} times`;
   });
 
-  const incrementCount = () => {
-    setCount(count + 1);
-  }
+  // const incrementCount = () => {
+  //   setCount(count + 1);
+  // }
 
   return (
     <div>
