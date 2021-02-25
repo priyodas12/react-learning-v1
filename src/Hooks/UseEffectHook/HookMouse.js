@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
 
-
-
 function HookMouse() {
 
   const [x, setX] = useState(0);
