@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import './App.css';
 //import ComponentC from './ContextAPI/ComponentC';
 //import { UserProvider } from './ContextAPI/userContext';
-import CounterFourUsArr from './Hooks/CounterFourUsArr'
+import CounterOneUeCls from './Hooks/CounterOneUeCls'
 class App extends Component {
   render() {
     return (
@@ -11,7 +11,7 @@ class App extends Component {
         { /*<UserProvider value="priyo">
           //  <ComponentC></ComponentC>
           //  </UserProvider>*/}
-        <CounterFourUsArr></CounterFourUsArr>
+        <CounterOneUeCls></CounterOneUeCls>
       </div>
     )
   }
