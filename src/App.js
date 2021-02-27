@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 
 import './App.css';
+import { Datafetching } from './Hooks/UseEffectHook/DataFetching';
 //import ComponentC from './ContextAPI/ComponentC';
 //import { UserProvider } from './ContextAPI/userContext';
-import HookMouse from './Hooks/UseEffectHook/HookMouse'
+
 class App extends Component {
   render() {
     return (
@@ -11,7 +12,7 @@ class App extends Component {
         { /*<UserProvider value="priyo">
           //  <ComponentC></ComponentC>
           //  </UserProvider>*/}
-        <HookMouse />
+        <Datafetching></Datafetching>
       </div >
     )
   }
