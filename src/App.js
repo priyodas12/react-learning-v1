@@ -1,21 +1,20 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 import './App.css';
-import { Datafetching } from './Hooks/UseEffectHook/DataFetching';
-//import ComponentC from './ContextAPI/ComponentC';
-//import { UserProvider } from './ContextAPI/userContext';
+import CompC from './Hooks/UseContext/CompC';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        { /*<UserProvider value="priyo">
-          //  <ComponentC></ComponentC>
-          //  </UserProvider>*/}
-        <Datafetching></Datafetching>
-      </div >
-    )
-  }
+export const UserContext = React.createContext();
+
+function App() {
+
+  return (
+    <div className="App">
+      <UserContext.Provider value={'priyo'}>
+        <CompC></CompC>
+      </UserContext.Provider>
+    </div >
+  )
+
 }
 
 export default App;
