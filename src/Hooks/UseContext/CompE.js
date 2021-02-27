@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import CompF from './CompF'
+import { UserContext, MultipleContext } from '../../App'
+
+
 
 function CompE() {
+
+  const uc = useContext(UserContext);
+  const mc = useContext(MultipleContext);
   return (
     <div>
-      <CompF></CompF>
+      {uc}---{mc}
+      {/*<CompF></CompF>*/}
     </div>
   )
 }

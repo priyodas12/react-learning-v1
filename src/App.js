@@ -4,13 +4,16 @@ import './App.css';
 import CompC from './Hooks/UseContext/CompC';
 
 export const UserContext = React.createContext();
+export const MultipleContext = React.createContext();
 
 function App() {
 
   return (
     <div className="App">
       <UserContext.Provider value={'priyo'}>
-        <CompC></CompC>
+        <MultipleContext.Provider value={'das'}>
+          <CompC></CompC>
+        </MultipleContext.Provider>
       </UserContext.Provider>
     </div >
   )
